@@ -43,7 +43,5 @@ These outputs can be reproduced by running the notebook in Colab or locally.
 
 ## ⚙️ Setup Instructions
 
-### 🔧 1. Clone the Repository
-```bash
-git clone https://github.com/dallen12151830/PEFT.git
-cd PEFT/LoRA
+### 1. Download the ipython file in the LoRA folder
+### 2. In the file, change the folder that you want to save the checkpoint and the model weights
