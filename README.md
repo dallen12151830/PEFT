@@ -24,7 +24,8 @@ Instead of full fine-tuning, LoRA updates only a small fraction of parameters, s
       bias="none",
       task_type=TaskType.SEQ_CLS,
       target_modules=["query", "value"]
-  )```
+  )
+  ```
 - **Trainable Parameters**: Only 0.27% of total model parameters are updated during training.
 - **Goal**: Evaluate model performance using different training data sizes (1k, 8k, 56k samples) under fixed architecture and training setup.
 
