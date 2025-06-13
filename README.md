@@ -24,7 +24,7 @@ Instead of full fine-tuning, LoRA updates only a small fraction of parameters, s
       bias="none",
       task_type=TaskType.SEQ_CLS,
       target_modules=["query", "value"]
-  )
+  )```
 - **Trainable Parameters**: Only 0.27% of total model parameters are updated during training.
 - **Goal**: Evaluate model performance using different training data sizes (1k, 8k, 56k samples) under fixed architecture and training setup.
 
@@ -58,9 +58,8 @@ These outputs can be reproduced by running the notebook in Colab or locally.
 ### 1. Download the IPython file (sequence_classification.ipynb) from the LoRA/ folder.
 ### 2. Update the working directory in the notebook:
 Modify this line to specify where to save checkpoints and model weights:
-
   ```python
   working_dir = '/your/custom/folder/path'
-
+  ```
 ### 3. Run the notebook in Colab or Jupyter:
 All dependencies will be installed automatically (e.g., transformers, datasets, peft).
