@@ -55,5 +55,10 @@ These outputs can be reproduced by running the notebook in Colab or locally.
 
 ## ⚙️ Setup Instructions
 
-### 1. Download the ipython file in the LoRA folder
-### 2. In the file, change the folder that you want to save the checkpoint and the model weights
+### 1. Download the IPython file (sequence_classification.ipynb) from the LoRA/ folder.
+### 2. Update the working directory in the notebook:
+Modify this line to specify where to save checkpoints and model weights:
+  ```python
+  working_dir = '/your/custom/folder/path'
+### 3. Run the notebook in Colab or Jupyter:
+All dependencies will be installed automatically (e.g., transformers, datasets, peft).
