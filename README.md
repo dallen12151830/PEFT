@@ -33,11 +33,11 @@ Instead of full fine-tuning, LoRA updates only a small fraction of parameters, s
 
 ## 🧪 Experimental Results
 
-| Training Samples | Test Loss | Accuracy | F1-Score | Trainable Params |
-|------------------|-----------|----------|----------|------------------|
-| 1,000            | 0.329     | 87.3%    | 0.875    | 0.27%            |
-| 8,000            | 0.240     | 90.6%    | 0.906    | 0.27%            |
-| 56,000           | 0.172     | 93.5%    | 0.934    | 0.27%            |
+| Training Samples | Test Loss | Accuracy | F1-Score |
+|------------------|-----------|----------|----------|
+| 1,000            | 0.329     | 87.3%    | 0.875    |
+| 8,000            | 0.240     | 90.6%    | 0.906    |
+| 56,000           | 0.172     | 93.5%    | 0.934    |
 
 > 🔍 **Observation**: As training size increases, both accuracy and F1-score consistently improve. LoRA-based fine-tuning achieves the **same 93.5% accuracy as full fine-tuning** (reported in original BERT paper) with only **0.27% of parameters updated**.
 
