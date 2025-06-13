@@ -12,15 +12,27 @@ Instead of full fine-tuning, LoRA updates only a small fraction of parameters, s
 
 ## 🎯 Task Description
 
-- **Dataset**: [SST-2](https://gluebenchmark.com/tasks) (binary sentiment classification)
-- **Model**: `bert-base-uncased` + LoRA (PEFT)
+- **Dataset**: SST-2 (binary sentiment classification)
+- **Model**: `bert-base-uncased` fine-tuned using LoRA (Low-Rank Adaptation)
+- **PEFT Method**: [LoRA](https://arxiv.org/abs/2106.09685) – Parameter-Efficient Fine-Tuning
+- **LoRA Configuration**:
+  ```python
+  LoraConfig(
+      r=8,
+      lora_alpha=16,
+      lora_dropout=0.1,
+      bias="none",
+      task_type=TaskType.SEQ_CLS,
+      target_modules=["query", "value"]
+  )
+- **Trainable Parameters**: Only 0.27% of total model parameters are updated during training.
 - **Goal**: Evaluate model performance using different training data sizes (1k, 8k, 56k samples) under fixed architecture and training setup.
 
 ---
 
 ## 🧪 Experimental Results
 
-| Training Samples | Eval Loss | Accuracy | F1-Score | Trainable Params |
+| Training Samples | Test Loss | Accuracy | F1-Score | Trainable Params |
 |------------------|-----------|----------|----------|------------------|
 | 1,000            | 0.329     | 87.3%    | 0.875    | 0.27%            |
 | 8,000            | 0.240     | 90.6%    | 0.906    | 0.27%            |
