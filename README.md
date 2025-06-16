@@ -34,12 +34,12 @@ Instead of full fine-tuning, LoRA updates only a small fraction of parameters, s
 ## 🧪 Experimental Results
 
 | Training Samples | Test Loss | Accuracy | F1-Score |
-|------------------|-----------|----------|----------|
-| 1,000            | 0.329     | 87.3%    | 0.875    |
-| 8,000            | 0.240     | 90.6%    | 0.906    |
-| 56,000           | 0.172     | 93.5%    | 0.934    |
+|------------------|-----------|----------|----------|	
+| 1,000            | 0.364     | 85.2%    | 0.853    |
+| 8,000            | 0.247     | 89.6%    | 0.898    |	
+| 56,000           | 0.234     | 91.5%    | 0.916    |
 
-> 🔍 **Observation**: As training size increases, both accuracy and F1-score consistently improve. LoRA-based fine-tuning achieves the **same 93.5% accuracy as full fine-tuning** (reported in [BERT paper](https://arxiv.org/abs/1810.04805)) with only **0.27% of parameters updated**.
+> 🔍 **Observation**: As training data size increases, both accuracy and F1-score improve consistently. LoRA-based fine-tuning delivers strong results with minimal parameter updates, validating the efficiency of PEFT in practice.
 
 ---
 
@@ -50,7 +50,7 @@ Instead of full fine-tuning, LoRA updates only a small fraction of parameters, s
 - Training Logs saved as CSV
 - Output Plots saved as `loss.pdf` and `acc.pdf`
 
-These outputs can be reproduced by running the notebook in Colab or locally.
+These results can be reproduced by running the notebook locally or on Google Colab.
 
 ---
 
